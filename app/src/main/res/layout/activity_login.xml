@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_izq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="196dp"
+        android:layout_height="148dp"
+        android:layout_marginTop="30dp"
+        android:contentDescription="logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/titulo_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/msj_inicio_login"
+        android:gravity="center"
+        android:textSize="32dp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textColor="@color/font_color_title"
+        android:layout_marginTop="30dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@id/icon"/>
+
+    <TextView
+        android:id="@+id/sub_titulo_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sub_msj_inicio_login"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/font_color_sub_title"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@id/titulo_la"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/correo_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        style="?attr/textInputFilledStyle"
+        app:hintTextColor="@color/bg_button_primary"
+        app:placeholderTextColor="@color/bg_button_primary"
+        app:boxStrokeColor="#009ef7"
+        android:outlineSpotShadowColor="#009ef7"
+        android:outlineAmbientShadowColor="#009ef7"
+        app:boxBackgroundColor="@color/bg_hint_input"
+        android:textColorHint="@color/material_dynamic_primary0"
+        android:hint="@string/hint_correo"
+        app:endIconMode="clear_text"
+        app:layout_constraintEnd_toStartOf="@id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@+id/sub_titulo_la"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/correo_in"
+            android:inputType="textEmailAddress"
+            android:textColor="@color/font_color_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+
+        android:id="@+id/contrasenia_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="?attr/textInputFilledStyle"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:hintTextColor="@color/bg_button_primary"
+        app:placeholderTextColor="@color/bg_button_primary"
+        app:boxStrokeColor="#009ef7"
+        android:outlineSpotShadowColor="#009ef7"
+        android:outlineAmbientShadowColor="#009ef7"
+        app:boxBackgroundColor="@color/bg_hint_input"
+        android:textColorHint="@color/material_dynamic_primary0"
+        android:hint="@string/hint_contrasenia"
+        app:endIconMode="password_toggle"
+        app:layout_constraintEnd_toStartOf="@id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@+id/correo_la"
+        app:errorEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/contrasenia_in"
+            android:inputType="textPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <View
+        android:id="@+id/linea1"
+        android:layout_width="58dp"
+        android:layout_height="1dp"
+        android:background="@color/font_color_sub_title"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_la"
+        app:layout_constraintStart_toStartOf="@id/guideline_izq"
+        app:layout_constraintTop_toTopOf="@+id/txv_la" />
+
+    <View
+        android:id="@+id/linea2"
+        android:layout_width="58dp"
+        android:layout_height="1dp"
+        android:background="@color/font_color_sub_title"
+        app:layout_constraintBottom_toBottomOf="@+id/txv_la"
+        app:layout_constraintEnd_toEndOf="@id/guideline_dere"
+        app:layout_constraintTop_toTopOf="@+id/txv_la" />
+
+
+    <Button
+        android:id="@+id/txv_la"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.Button.TextButton"
+        android:text="@string/txv_msj_inicio_login"
+        android:textColor="@color/bg_button_primary"
+        android:textSize="14sp"
+        android:fontFamily="@font/poppins_regular"
+        app:layout_constraintBottom_toTopOf="@+id/btn_login"
+        app:layout_constraintEnd_toStartOf="@+id/linea2"
+        app:layout_constraintStart_toEndOf="@+id/linea1"
+        app:layout_constraintTop_toBottomOf="@+id/contrasenia_la"/>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:fontFamily="@font/poppins_bold"
+        android:gravity="center"
+        android:padding="15dp"
+        android:text="@string/btn_msj_inicio_login"
+        android:textSize="15dp"
+        app:cornerRadius="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/guideline_dere"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@id/guideline_izq" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

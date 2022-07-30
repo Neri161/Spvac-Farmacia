@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Spvac-Farmacia</string>
+
+<!--    Recursos strings login-->
+    <string name="msj_inicio_login">¡Bienvenido!</string>
+    <string name="hint_correo">Correo electronico</string>
+    <string name="hint_contrasenia">Contraseña</string>
+    <string name="sub_msj_inicio_login">Inicia sesion para empezar a trabajar</string>
+    <string name="txv_msj_inicio_login">¿Has Olvidado Tu Contraseña?</string>
+    <string name="btn_msj_inicio_login">Acceder</string>
 </resources>
