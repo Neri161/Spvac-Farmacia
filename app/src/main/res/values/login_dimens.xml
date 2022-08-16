@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--LOGO-->
+    <dimen name="tam_width_logo">196dp</dimen>
+    <dimen name="tam_height_logo">148dp</dimen>
+    <dimen name="m_top_logo">30dp</dimen>
+
+    <!--TITULOS-->
+    <dimen name="tam_titulo">15sp</dimen>
+    <dimen name="tam_sub_titulo">10sp</dimen>
+    <dimen name="m_top_titulo">10dp</dimen>
+
+    <!--INPUTS-->
+    <dimen name="m_top_input">20dp</dimen>
+
+
+</resources>
