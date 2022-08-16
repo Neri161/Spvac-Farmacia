@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--LOGO-->
+    <dimen name="tam_width_logo">120dp</dimen>
+    <dimen name="tam_height_logo">160dp</dimen>
+    <dimen name="m_top_logo">30dp</dimen>
+
+    <!--TITULOS-->
+    <dimen name="tam_titulo">20sp</dimen>
+    <dimen name="tam_sub_titulo">15sp</dimen>
+    <dimen name="m_top_titulo">10dp</dimen>
+
+    <!--INPUTS-->
+    <dimen name="m_top_input">30dp</dimen>
+    <dimen name="p_top_input">5dp</dimen>
+    <dimen name="p_bottom_input">5dp</dimen>
+
+    <!--LINEAS-->
+    <dimen name="tam_width_linea">35dp</dimen>
+    <dimen name="tam_height_linea">1dp</dimen>
+
+    <!--BOTONES-->
+    <dimen name="tam_btn_txt">14sp</dimen>
+    <dimen name="tam_pry_btn_txt">13sp</dimen>
+    <dimen name="m_bottom_btn">58dp</dimen>
+    <dimen name="p_all_btn">15dp</dimen>
+    <dimen name="btn_all_radius">10dp</dimen>
+</resources>
