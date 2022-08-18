@@ -27,7 +27,7 @@ class Login : AppCompatActivity() {
             val inContrasenia: EditText = findViewById(R.id.contrasenia_in);
 
             if(inCorreo.text.isNotEmpty() && inContrasenia.text.isNotEmpty()){
-                iniciarSesion("soporte@andocodeando.net", inContrasenia.text.toString())
+                iniciarSesion(inCorreo.text.toString(), inContrasenia.text.toString())
             }else{
                 if(inCorreo.text.isEmpty()) inCorreo.error = "Necesita colocar un correo"
                 if(inContrasenia.text.isEmpty()) inContrasenia.error = "Necesita colocar una contraseña"
@@ -39,18 +39,15 @@ class Login : AppCompatActivity() {
         RetrofitClient.instance.entrarLogin(correo, contrasenia)
             .enqueue(object: Callback<LoginResponse> {
                 override fun onResponse(call: Call<LoginResponse>, response: Response<LoginResponse>) {
-
                     val res = response.body();
-
                     if(response.code() == 400){
-
-
-
+                        Toast.makeText(applicationContext, res?.error.toString(), Toast.LENGTH_LONG).show();
                     }else if(response.code() == 500){
-
-
+                        Toast.makeText(applicationContext, res?.error.toString(), Toast.LENGTH_LONG).show()
                     }else{
                         val res = response.body();
+                        Toast.makeText(applicationContext, "Sesion iniciada", Toast.LENGTH_LONG).show()
+                        Toast.makeText(applicationContext, res?.token.toString(), Toast.LENGTH_LONG).show()
                     }
                 }
                 override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
