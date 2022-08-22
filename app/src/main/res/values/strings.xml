@@ -10,9 +10,9 @@
     <string name="btn_msj_inicio_login">Acceder</string>
 
     <!-- Recursos pantalla de sucursal -->
-    <string name="sub_msj_sucursal">En que sucursal te encuentras</string>
+    <string name="sub_msj_sucursal">¿En que sucursal te encuentras?</string>
     <string-array name="sucursal_array">
-        <item>Campo 1</item>
+        <item>El 45</item>
         <item>Campo 2</item>
         <item>Campo 3</item>
         <item>Campo 4</item>
