@@ -1,11 +1,20 @@
 <resources>
     <string name="app_name">Spvac-Farmacia</string>
 
-<!--    Recursos strings login-->
+    <!--    Recursos strings login-->
     <string name="msj_inicio_login">¡Bienvenido!</string>
     <string name="hint_correo">Correo electronico</string>
     <string name="hint_contrasenia">Contraseña</string>
     <string name="sub_msj_inicio_login">Inicia sesion para empezar a trabajar</string>
     <string name="txv_msj_inicio_login">¿Has Olvidado Tu Contraseña?</string>
     <string name="btn_msj_inicio_login">Acceder</string>
+    <string name="title_activity_sucursales">sucursales</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

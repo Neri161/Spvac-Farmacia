@@ -45,6 +45,7 @@ class Login : AppCompatActivity() {
                     }else if(response.code() == 500){
                         Toast.makeText(applicationContext, res?.error.toString(), Toast.LENGTH_LONG).show()
                     }else{
+                        //Response 200
                         val res = response.body();
                         Toast.makeText(applicationContext, "Sesion iniciada", Toast.LENGTH_LONG).show()
                         Toast.makeText(applicationContext, res?.token.toString(), Toast.LENGTH_LONG).show()
