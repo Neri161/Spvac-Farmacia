@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Sucursales">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_dere"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="24dp" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_izq"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="24dp" />
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:layout_marginTop="60dp"
+        android:contentDescription="logo"
+        android:src="@drawable/logo"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toTopOf="parent" />
+    <TextView
+        android:id="@+id/titulo_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/msj_inicio_login"
+        android:gravity="center"
+        android:textSize="30sp"
+        android:fontFamily="@font/poppins_semi_bold"
+        android:textColor="@color/font_color_title"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@id/icon"/>
+
+    <TextView
+        android:id="@+id/sub_titulo_la"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="@string/sub_msj_sucursal"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_regular"
+        android:textColor="@color/font_color_sub_title"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@id/titulo_la"/>
+
+    <com.google.android.material.card.MaterialCardView
+        style="@style/Widget.Material3.CardView.Elevated"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:checkable="true"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_marginTop="75dp"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_dere"
+        app:layout_constraintStart_toStartOf="@+id/guideline_izq"
+        app:layout_constraintTop_toBottomOf="@+id/sub_titulo_la">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/titulo_card_sucursale"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_semi_bold"
+                android:text="Sucursales"
+                android:textColor="@color/font_color_title"
+                android:textSize="25sp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.Material3.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:hint="Sucursal">
+                <AutoCompleteTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:inputType="none"
+                    app:simpleItems="@array/sucursal_array" />
+            </com.google.android.material.textfield.TextInputLayout>
+            <Button
+                android:id="@+id/btn_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:padding="@dimen/p_all_btn"
+                android:text="@string/btn_msj_inicio_login"
+                android:textSize="15sp"
+                app:cornerRadius="@dimen/btn_all_radius"
+                ></Button>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
