@@ -14,9 +14,10 @@ import retrofit2.Callback
 import retrofit2.Response
 
 class Login : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_login)
+
 
 
         val btnIniciaSesion: Button = findViewById(R.id.btn_login)
